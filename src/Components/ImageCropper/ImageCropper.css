@@ -1,0 +1,48 @@
+/* .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: aquamarine;
+  margin: 5px;
+  flex-wrap: wrap;
+} */
+
+.cropperContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  gap: 10px;
+}
+.cropperContainer img {
+  width: 500px;
+  height: 500px;
+}
+/* .cropperContainer button {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(57, 148, 201);
+  color: white;
+  cursor: pointer;
+}
+
+.resultContainer button {
+  padding: 15px;
+  color: white;
+  background-color: green;
+  cursor: pointer;
+} */
+.resultContainer img {
+  width: 500px;
+  height: 500px;
+}
+/* .resultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  gap: 10px;
+} */
