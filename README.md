@@ -4,10 +4,10 @@
 This project is a React application that allows users to upload an image, crop it to their desired dimensions, and submit the cropped image. The cropping functionality is provided by the react-image-crop library.
 
 ## Features
-Image Upload: Users can upload images to be cropped.
-Image Cropping: Allows users to select a portion of the image to crop using react-image-crop.
-Preview: Displays a preview of the cropped image.
-Submission: Sends the cropped image to a server endpoint.
+- Image Upload: Users can upload images to be cropped.
+- Image Cropping: Allows users to select a portion of the image to crop using react-image-crop.
+- Preview: Displays a preview of the cropped image.
+- Submission: Sends the cropped image to a server endpoint.
 
 ## Installation
 Clone the Repository: https://github.com/AkilAntony/image-cropper
@@ -36,18 +36,18 @@ javascript
 const response = await axios.post('YOUR_SERVER_ENDPOINT', { image: result });
 
 ## File Structure
-src/: Contains the React components and application logic.
-ImageCropper.js: Main component for image cropping functionality.
-App.js: Application entry point.
-index.js: Renders the React application.
-public/: Contains public assets like index.html.
-package.json: Contains project metadata and dependencies.
+- src/: Contains the React components and application logic.
+- ImageCropper.js: Main component for image cropping functionality.
+- App.js: Application entry point.
+- index.js: Renders the React application.
+- public/: Contains public assets like index.html.
+- package.json: Contains project metadata and dependencies.
 
 ## Dependencies
-react: JavaScript library for building user interfaces.
-react-image-crop: Library for image cropping.
-axios: Promise-based HTTP client for the browser and Node.js.
+- react: JavaScript library for building user interfaces.
+- react-image-crop: Library for image cropping.
+- axios: Promise-based HTTP client for the browser and Node.js.
 
 ## Troubleshooting
-Issue: "Cannot read properties of null (reading 'naturalWidth')"
-Solution: Ensure that the image state is correctly set and is not null before accessing its properties.
+- Issue: "Cannot read properties of null (reading 'naturalWidth')"
+-Solution: Ensure that the image state is correctly set and is not null before accessing its properties.
