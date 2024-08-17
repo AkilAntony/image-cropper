@@ -67,22 +67,10 @@ const ImageCropper = () => {
         setWarning('Failed to upload image. Please try again.')
       }
     }
-
-
-    // Function to download the image
-    const handleSave = () =>{
-      const link = document.createElement('a');
-      link.href = result;;
-      link.alt = 'Cropped Image'
-      link.download = 'CroppedImage.png';
-      document.body.appendChild(link);;
-      link.click();
- 
-    }
  
   return (
-    <div className='flex md:h-[100vh] w-full px-3 gap-10 min-h-[100vh]
-          md:flex-row flex-col items-center justify-around '>
+    <div className='flex md:h-[100vh] w-full px-3 bg-slate-200
+          md:flex-row flex-col items-center justify-around gap-10 min-h-[100vh]'>
       {selectedImageUrl && (
         <div className="cropperContainer ">
           <h1 className='font-bold text-3xl'>Crop Your Image</h1>
@@ -97,7 +85,7 @@ const ImageCropper = () => {
           </ReactCrop>
           <button 
             onClick={getCroppedImage}
-            className='w-52 py-3 rounded-md bg-yellow-500 hover:bg-yellow-600 text-white
+            className='w-52 py-3 rounded-md bg-cyan-600 text-white
               border-none mt-3'>
               Crop Image</button>
         </div>
@@ -108,17 +96,10 @@ const ImageCropper = () => {
                 flex-col gap-4 items-center justify-center">
               <h1 className='font-bold text-3xl mb-3'>Your Cropped Image</h1>
               <img src={result} alt="img" />
-              <div className='flex gap-3'>
-                <button onClick={handleSave}
-                  className='w-52 py-3 rounded-md bg-blue-500 text-white
-                    border-none  hover:bg-blue-600'>
-                  Save</button>
-                <button
-                  onClick={handleSubmit}
-                  className='w-52 py-3 rounded-md text-white
-                    border-none bg-green-500 hover:bg-green-600'>Submit</button>
-              </div>
-            
+              <button
+                 onClick={handleSubmit}
+                 className='w-52 py-3 rounded-md bg-green-700 text-white
+              border-none'>Submit</button>
               {
                 warning && <p>{warning}</p>
               }

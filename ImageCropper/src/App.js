@@ -5,7 +5,7 @@ import ImageCropper from './Components/ImageCropper/ImageCropper';
 
 function App() {
   return (
-    <div className="App bg-gray-100">
+    <div className="App">
    
       <Routes>
         <Route path='/' element = { <ImageSelector />} />
