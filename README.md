@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Image Cropper Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project is a React application that allows users to upload an image, crop it to their desired dimensions, and submit the cropped image. The cropping functionality is provided by the react-image-crop library.
 
-## Available Scripts
+## Features
+- Image Upload: Users can upload images to be cropped.
+- Image Cropping: Allows users to select a portion of the image to crop using react-image-crop.
+- Preview: Displays a preview of the cropped image.
+- Submission: Sends the cropped image to a server endpoint.
 
-In the project directory, you can run:
+## Installation
+Clone the Repository: https://github.com/AkilAntony/image-cropper
+ 
+1. Navigate to the Project Directory: cd image-cropper
 
-### `npm start`
+2. Install Dependencies: npm install
+ 
+3. Start the Development Server: npm start
+This will start the application on http://localhost:3000.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Upload an Image:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Click the upload button to select an image file.
+Crop the Image:
 
-### `npm test`
+Use the cropping tool to select the desired area of the image.
+Submit the Cropped Image:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Click the "Submit Image" button to send the cropped image to the server.
 
-### `npm run build`
+## Configuration
+- Server Endpoint: Update the endpoint URL in the handleSubmit function in ImageCropper.js to match your server URL.
+javascript
+ 
+const response = await axios.post('YOUR_SERVER_ENDPOINT', { image: result });
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## File Structure
+- src/: Contains the React components and application logic.
+- ImageCropper.js: Main component for image cropping functionality.
+- App.js: Application entry point.
+- index.js: Renders the React application.
+- public/: Contains public assets like index.html.
+- package.json: Contains project metadata and dependencies.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Dependencies
+- react: JavaScript library for building user interfaces.
+- react-image-crop: Library for image cropping.
+- axios: Promise-based HTTP client for the browser and Node.js.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Troubleshooting
+- Issue: "Cannot read properties of null (reading 'naturalWidth')"
+-Solution: Ensure that the image state is correctly set and is not null before accessing its properties.
