@@ -8,6 +8,7 @@ This project is a React application that allows users to upload an image, crop i
 - Image Cropping: Allows users to select a portion of the image to crop using react-image-crop.
 - Preview: Displays a preview of the cropped image.
 - Submission: Sends the cropped image to a server endpoint.
+- Download: Now you can download the cropped image to your local ( NEW)
 
 ## Installation
 Clone the Repository: https://github.com/AkilAntony/image-cropper
